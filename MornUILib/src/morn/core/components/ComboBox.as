@@ -207,6 +207,20 @@ package morn.core.components {
 			callLater(changeItem);
 		}
 		
+		/**
+		 *获取或设置下拉列表 
+		 * @return 
+		 * 
+		 */		
+		public function get labelList():Array{
+			return _labels;
+		}
+		
+		public function set labelList(value:Array):void{
+			this._labels = value;
+			callLater(changeItem);
+		}
+		
 		protected function changeItem():void {
 			//赋值之前需要先初始化列表
 			exeCallLater(changeList);
